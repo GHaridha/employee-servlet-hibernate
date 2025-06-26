@@ -34,6 +34,6 @@ public class DeleteEmployee extends HttpServlet{
 		printWriter.print("<html><body>");
 		printWriter.print("<h1> Data Deleted Successfully</h1>");
 		printWriter.print("</body></html>");
-		
+		req.getRequestDispatcher("logoutServlet").include(req, resp);
 	}
 }

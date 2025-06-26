@@ -9,7 +9,7 @@
 </head>
 <body>
 	<%
-	Employee e = (Employee) request.getAttribute("employee");
+	Employee e = (Employee) session.getAttribute("employee");
 	
 	%>
 	<div style="margin-bottom: 20px;">
@@ -24,6 +24,9 @@
 		<br> <label>State:</label>
 		<%=e.getAddress().getState()%><br> <br> <label>Country:</label>
 		<%=e.getAddress().getCountry()%><br>
+	</div>
+	<div style="text-align: right; margin: 10px;">
+		<a href="logoutServlet" style="text-decoration:none; color:red; font-weight:bold;">Logout</a>
 	</div>
 	<form action="redirecting" method="post">
 		<input type="hidden" name="empid" value="<%= e.getEmpId() %>">

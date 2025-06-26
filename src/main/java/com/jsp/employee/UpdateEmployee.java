@@ -1,6 +1,7 @@
 package com.jsp.employee;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -47,5 +48,11 @@ public class UpdateEmployee extends HttpServlet{
 		
 		et.commit();
 	
+		PrintWriter printWriter = resp.getWriter();
+		printWriter.print("<html><body>");
+		printWriter.print("<h1> Data Updated Successfully</h1>");
+		printWriter.print("</body></html>");
+		
+		req.getRequestDispatcher("logoutServlet").include(req, resp);
 	}
 }
