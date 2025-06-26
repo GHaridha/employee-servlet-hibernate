@@ -1,0 +1,21 @@
+# Ignore Maven target directory
+/target/
+
+# Ignore logs
+*.log
+
+# Ignore IDE files
+*.iml
+.idea/
+.project
+.classpath
+.settings/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore environment files (if any)
+.env
+
+.mvn/wrapper/maven-wrapper.jar
