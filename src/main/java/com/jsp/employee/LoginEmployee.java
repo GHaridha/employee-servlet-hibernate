@@ -40,11 +40,9 @@ public class LoginEmployee extends HttpServlet{
 		else {
 		    // User authenticated
 		    Employee e = resultList.get(0);
-//		    req.setAttribute("employee", e);
 		    HttpSession session = req.getSession();
 			session.setAttribute("employee", e);
 			resp.sendRedirect("employee-detail.jsp");
-		    //req.getRequestDispatcher("employee-detail.jsp").forward(req, resp);
 		}
 	}
 }
