@@ -36,6 +36,7 @@ public class LoginEmployee extends HttpServlet{
 		    // No user found
 		    PrintWriter out = resp.getWriter();
 		    out.print("<html><body><h2 style='color:red;'>Invalid email or password</h2></body></html>");
+		    req.getRequestDispatcher("login.html").include(req, resp);
 		}
 		else {
 		    // User authenticated
